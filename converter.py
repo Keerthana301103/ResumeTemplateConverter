@@ -19,7 +19,7 @@ if not api_key:
 
 genai.configure(api_key=api_key)
 # Using gemini-1.5-flash as a stable, available model
-model = genai.GenerativeModel('gemini-1.5-flash') 
+model = genai.GenerativeModel('gemini-2.5-flash') 
 
 # Define the brand color (used by T1, T2 uses it inline)
 M_RED = RGBColor(204, 31, 32)
@@ -518,4 +518,5 @@ def build_docx_for_template_2(resume_data):
         
     
     buffer = BytesIO(); doc.save(buffer); buffer.seek(0)
+
     return buffer
