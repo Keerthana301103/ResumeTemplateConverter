@@ -1,5 +1,5 @@
 import uvicorn
-import api.converter as converter  
+import converter as converter  
 from fastapi import FastAPI, File, UploadFile, Query, HTTPException
 from fastapi.responses import StreamingResponse
 from io import BytesIO
@@ -78,4 +78,5 @@ async def convert_resume_endpoint(
     )
 
 if __name__ == "__main__":
+
     uvicorn.run(app, host="0.0.0.0", port=8000)
